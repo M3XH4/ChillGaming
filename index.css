@@ -255,13 +255,16 @@ button {
         text-align: center;
     }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 500px) {
+  .navbarHeader {
+    padding: 0px;
+  }
   .aboutContainer .aboutCardcontainer .aboutCard h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .aboutContainer .aboutCardcontainer .aboutCard h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
   }
   .aboutContainer .aboutCardcontainer .aboutCard p {
