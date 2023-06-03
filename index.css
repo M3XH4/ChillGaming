@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+html{
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 118.94px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #333;
+  background-image: linear-gradient(
+    135deg,
+    #ae3eba36 0%,
+    #3d77863c 46%,
+    #a23b9f1e 100%
+  );
+  font-family: "Poppins", sans-serif;
+  padding-top: 17vh;
+}
+.navbarHeader{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 0px 30px;
+    background: rgb(119, 5, 179);
+    background: linear-gradient(
+        20deg,
+        rgba(119, 5, 179, 1) 2%,
+        rgba(129, 5, 187, 1) 14%,
+        rgba(130, 5, 187, 1) 17%,
+        rgba(139, 4, 196, 1) 27%,
+        rgba(111, 3, 211, 1) 56%,
+        rgba(157, 3, 217, 1) 77%,
+        rgba(136, 0, 255, 1) 100%
+    );
+}
+.navbarHeader > *, .nav-item > * {
+    color:white;
+}
+.webTitle {
+    font-size: 1.8rem;
+}
+.navbar-nav {
+  transition: all 800ms;
+  backdrop-filter: blur(2px) saturate(133%);
+  -webkit-backdrop-filter: blur(2px) saturate(133%);
+  background-color: rgba(129, 0, 255, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.nav-item a {
+  font-size: 1.2rem;
+  transition: all 700ms;
+}
+.nav-item > a:hover {
+  border-radius: 12px;
+  background-color: #6200a8;
+  color: white;
+
+}
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 5vh;
+}
+.aboutContainer .aboutCardcontainer .aboutCard h1 {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    color:white;
+}
+.aboutCardcontainer .aboutCard {
+    flex-wrap: wrap;
+    width: 50vw;
+    padding: 50px;
+    backdrop-filter: blur(6px) saturate(133%);
+    -webkit-backdrop-filter: blur(6px) saturate(133%);
+    background-color: rgba(129, 0, 255, 0.42);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow:0px 0px 77px 10px rgba(108,8,161,0.67);
+    -moz-box-shadow: 0px 0px 77px 10px rgba(108,8,161,0.67);
+    box-shadow: 0px 0px 77px 10px rgba(108,8,161,0.67);
+}
+.aboutCardcontainer .aboutCard h2 {
+    text-align: center;
+    padding-bottom: 8px;
+    font-size: 2.5rem;
+    color:white;
+}
+.aboutCardcontainer .aboutCard p {
+    font-size: 1.5rem;
+    color:white;
+}
+.gameContainer {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.gameContainer h1{
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 50px;
+}
+.gameCardcontainer {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.gameCardcontainer .gameCard {
+  position: relative;
+}
+.gameCardcontainer .gameCard .face {
+  width: 300px;
+  height: 220px;
+  transition: 0.4s;
+}
+.gameCardcontainer .gameCard .face.front {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(120px);
+}
+.gameCardcontainer .gameCard:hover .face.front {
+  transform: translateY(0);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+.gameCardcontainer .gameCard:nth-child(2):hover .face.front {
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(135, 244, 173),
+    inset -20px 0 80px rgba(116, 235, 142, 0.507), inset 20px 0 300px rgba(86, 223, 95, 0.689),
+    inset -20px 0 300px rgb(84, 255, 87), 0 0 50px #6eec6ec5,
+    -10px 0 80px rgba(13, 255, 0, 0.717), 10px 0 80px rgba(91, 222, 71, 0.616);
+}
+.gameCardcontainer .gameCard:nth-child(3):hover .face.front {
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(4, 91, 142),
+    inset -20px 0 80px rgb(5, 187, 227), inset 20px 0 300px rgb(6, 112, 169),
+    inset -20px 0 300px rgb(6, 98, 155), 0 0 50px #00ccff,
+    -10px 0 80px rgb(4, 86, 82), 10px 0 80px rgb(35, 60, 67);
+}
+.gameCardcontainer .gameCard .face.front .content {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  transition: 0.5s;
+  text-align: center;
+}
+.gameCardcontainer .gameCard:hover .face.front .content {
+  opacity: 1;
+}
+.gameCardcontainer .gameCard .face.front .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gameCardcontainer .gameCard .face.front .content i {
+  font-size: 3rem;
+  color: white;
+  display: inline-block;
+}
+.gameCardcontainer .gameCard .face.front .content h3 {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
+.gameCardcontainer .gameCard .face.front .content a {
+  transition: 0.5s;
+}
+.gameCardcontainer .gameCard .face.back {
+  position: relative;
+  background-color: #ffffff;
+  background-image: linear-gradient(160deg, #ffffff 0%, #ffdeff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transform: translateY(-100px);
+}
+.gameCardcontainer .gameCard:hover .face.back {
+  transform: translateY(0);
+}
+.gameCardcontainer .gameCard .face.back .content p, span
+button {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.gameCardcontainer .gameCard .face.back .content p {
+    text-decoration: none;
+    text-justify: justify;
+    text-align: center;
+}
+.gameCardcontainer .gameCard .face.back .content span {
+    color: black;
+    font-size: 1rem;
+}
+.gameCardcontainer .gameCard .face.back .content button {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 15px 0 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #333;
+  border-radius: 6px;
+}
+.gameCardcontainer .gameCard .face.back .content button:hover {
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar-nav {
+      margin-top: 10px;
+    }
+    .navbar-nav > .nav-item {
+      text-align: center;
+      padding: 10px
+    }
+    .gameContainer h1 {
+        text-align: center;
+    }
+    .aboutContainer {
+        padding-top: 30px;
+        padding-bottom: 500px;
+    }
+    .aboutCardcontainer .aboutCard {
+        width: 80vw;
+        text-align: center;
+    }
+    .aboutContainer .aboutCardcontainer .aboutCard p {
+        font-size: 1.3rem;
+    }
+    .aboutContainer .aboutCardcontainer .aboutCard h3 {
+        font-size: 2rem;
+    }
+    .aboutContainer .aboutCardcontainer .aboutCard h1 {
+        text-align: center;
+    }
+}
