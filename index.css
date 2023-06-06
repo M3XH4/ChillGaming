@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 html{
     scroll-behavior: smooth !important;
     scroll-padding-top: 118.94px;
@@ -40,6 +42,7 @@ body {
 }
 .webTitle {
     font-size: 1.8rem;
+    font-family: 'Lilita One', cursive;
 }
 .navbar-nav {
   transition: all 800ms;
@@ -48,9 +51,10 @@ body {
   background-color: rgba(129, 0, 255, 0.25);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  font-family: 'Lilita One', cursive;
 }
 .nav-item a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all 700ms;
 }
 .nav-item > a:hover {
@@ -81,21 +85,22 @@ body {
     -webkit-box-shadow:0px 0px 77px 10px rgba(108,8,161,0.67);
     -moz-box-shadow: 0px 0px 77px 10px rgba(108,8,161,0.67);
     box-shadow: 0px 0px 77px 10px rgba(108,8,161,0.67);
+    font-family: 'Monomaniac One', sans-serif;
 }
 .aboutContainer .aboutCardcontainer .aboutCard h1 {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding-bottom: 10px;
   color:white;
 }
 .aboutCardcontainer .aboutCard h2 {
     text-align: center;
     padding-bottom: 8px;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color:white;
 }
 .aboutCardcontainer .aboutCard p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     width: 100%;
     color:white;
 }
@@ -225,6 +230,24 @@ button {
 .gameCardcontainer .gameCard .face.back .content button:hover {
   letter-spacing: 1px;
 }
+.gameCardcontainer .gameCard:nth-child(1) .face.back .content button:hover{
+  background-color: #4B6178;
+  -webkit-box-shadow:0px 0px 13px 4px rgba(131,169,207,1);
+  -moz-box-shadow: 0px 0px 13px 4px rgba(131,169,207,1);
+  box-shadow: 0px 0px 13px 4px rgba(131,169,207,1);
+}
+.gameCardcontainer .gameCard:nth-child(2) .face.back .content button:hover{
+  background-color: #B2BD07;
+  -webkit-box-shadow:0px 0px 13px 4px rgba(222,232,35,1);
+  -moz-box-shadow: 0px 0px 13px 4px rgba(222,232,35,1);
+  box-shadow: 0px 0px 13px 4px rgba(222,232,35,1);
+}
+.gameCardcontainer .gameCard:nth-child(3) .face.back .content button:hover{
+  background-color: #4582EB;
+  -webkit-box-shadow:0px 0px 13px 4px rgba(112,167,255,1);
+-moz-box-shadow: 0px 0px 13px 4px rgba(112,167,255,1);
+box-shadow: 0px 0px 13px 4px rgba(112,167,255,1);
+}
 @media only screen and (max-width: 770px) {
     .navbar-nav {
       margin-top: 10px;
@@ -264,7 +287,7 @@ button {
     text-align: center;
   }
   .navbar-brand {
-    width: 65px;
+    width: 60px;
   }
   .webTitle {
     font-size: 1.8rem;
