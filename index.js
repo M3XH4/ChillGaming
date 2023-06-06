@@ -2,8 +2,8 @@ function redirectTicTacToe() {
     location.href = "gameTicTacToe.html";
 }
 function redirectSnake() {
-    location.href = "";
+    location.href = "gameSnake.html";
 }
 function redirectTetris() {
-    location.href = "";
+    location.href = "gameTetris.html";
 }
