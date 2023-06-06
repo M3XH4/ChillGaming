@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.gameTTTContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+.gameTTTScreen {
+    display: flex;
+    flex-wrap: wrap;
+    width:300px;
+    background-color: rgb(44, 72, 104);
+    border-radius: 12px;
+}
+.cell {
+    border: 2px solid rgb(38, 93, 146);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    -webkit-box-shadow:0px 0px 15px 13px rgba(25,115,171,1);
+    -moz-box-shadow: 0px 0px 15px 13px rgba(25,115,171,1);
+    box-shadow: 0px 0px 15px 13px rgba(25,115,171,1);
+    font-family: 'Oswald', sans-serif;
+}
+.x {
+    color: rgb(166, 0, 237);
+    text-shadow: 0px 0px 7px rgba(188,0,251,0.95), 
+    0px 0px 7px rgba(188,0,251,0.95), 
+    0px 0px 7px rgba(188,0,251,0.95), 
+    0px 0px 7px rgba(188,0,251,0.95), 
+    0px 0px 7px rgba(188,0,251,0.95), 
+    0px 0px 7px rgba(188,0,251,0.95);
+}
+.o {
+    color: rgb(0, 255, 247);
+    text-shadow: 0px 0px 7px rgba(7,251,239,0.95), 
+    0px 0px 7px rgba(7,251,239,0.95), 
+    0px 0px 7px rgba(7,251,239,0.95), 
+    0px 0px 7px rgba(7,251,239,0.95), 
+    0px 0px 7px rgba(7,251,239,0.95),
+    0px 0px 7px rgba(7,251,239,0.95);
+}
+.gameInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 15px;
+    width: 60vw;
+    background: rgba( 163, 63, 255, 0.7 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -webkit-box-shadow:0px 0px 27px 13px rgba(157,0,255,0.9);
+    -moz-box-shadow: 0px 0px 27px 13px rgba(157,0,255,0.9);
+    box-shadow: 0px 0px 27px 13px rgba(157,0,255,0.9);
+    gap: 20px;
+}
+.gameTurn {
+    color: white;
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+#resetButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 120px;
+    height: 55px;
+    border-radius: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: all 800ms;
+    backdrop-filter: blur(2px) saturate(133%);
+    -webkit-backdrop-filter: blur(2px) saturate(133%);
+    background-color: rgba(129, 0, 255, 0.25);
+    border: 5px solid white;
+    color: white;
+
+}
+#resetButton:hover {
+    background-color: #490091;
+}
+@media only screen and (max-width: 768px) {
+    .gameInfo {
+        justify-content: center;
+        align-items: center;
+    }
+}
