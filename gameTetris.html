@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" files="image/x-icon" href="resource/favicon_logo.ico">
+    <title>ChillGaming</title>
+    <!--BOOTSTRAP5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/be39cba147.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="gameTetris.js" defer></script>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbarHeader">
+        <a href="index.html">
+            <img src="resource/logo.png" width="70px" class="navbar-brand">
+        </a>
+        <span class="navbar-text webTitle">CHILLGAMING</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link TTT" href="gameTicTacToe.html">TIC-TAC-TOE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link S" href="gameSnake.html">SNAKE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link T" href="gameTetris.html">TETRIS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>   
+    <div class="gameTContainer">
+        <div class="modal" id="gameoverTModal">
+            <div class="modal-dialog">
+            <div class="modal-content modalAll">
+                <div class="modal-header tModalHeader">
+                <h4 class="modal-title">GAME OVER</h4>
+                </div>
+                <div class="modal-body tModalBody">
+                    <p>Click The Retry Button To Restart The Game</p>
+                </div>
+                <div class="modal-footer tModalFooter">
+                    <button type="button" class="btn tretryButton" onclick="restartGame()">Retry</button>
+                </div>
+        
+            </div>
+            </div>
+        </div>
+        <div class="gameTScreen">
+            <div class="gameTInfo">
+                <span class="Tscore">Score: 0</span>
+                <span class="ThighScore">High Score: 0</span>
+            </div>
+            <div class="Tboard">
+                <canvas id="tetrisBoard" height="600px" width="300px"></canvas>
+            </div>
+            <div class="Tcontrol">
+                <i></i>
+                <i data-key="ArrowUp" class="fas fa-caret-square-up upButton"></i>
+                <i></i>
+                <i data-key="ArrowLeft" class="fas fa-caret-square-left"></i>
+                <i data-key="ArrowDown" class="fas fa-caret-square-down"></i>
+                <i data-key="ArrowRight" class="fas fa-caret-square-right"></i>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
