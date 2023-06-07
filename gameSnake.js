@@ -29,19 +29,19 @@ function retryFunction() {
     location.reload();
 }
 const changeDirection = (e) => {
-    if(e.key === "ArrowUp" && velocityY != 1){
+    if(e.key === "ArrowUp" && velocityY != 1 || e.key === "w" && velocityY != 1 ){
         velocityX = 0;
         velocityY = -1;
     }
-    else if(e.key === "ArrowDown" && velocityY != -1){
+    else if(e.key === "ArrowDown" && velocityY != -1 || e.key === "s" && velocityY != -1 ){
         velocityX = 0;
         velocityY = 1;
     }
-    else if(e.key === "ArrowLeft" && velocityX != 1){
+    else if(e.key === "ArrowLeft" && velocityX != 1 || e.key === "a" && velocityX != 1){
         velocityX = -1;
         velocityY = 0;
     }
-    else if(e.key === "ArrowRight" && velocityX != -1){
+    else if(e.key === "ArrowRight" && velocityX != -1 || e.key === "d" && velocityX != -1){
         velocityX = 1;
         velocityY = 0;
     }
@@ -83,5 +83,5 @@ const moveGame = () => {
     playBoard.innerHTML = putObjects;
 };
 changeFoodPosition();
-setIntervalID =  setInterval(moveGame, 125)
+setIntervalID =  setInterval(moveGame, 370)
 document.addEventListener("keydown", changeDirection);
