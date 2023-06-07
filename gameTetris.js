@@ -61,7 +61,9 @@ ctx.scale(30,30);
 let tetrominoesPieces = null
 let grid = generateGrid();
 let gameOver = false;
+let closeButtonClicked = true;
 let controls = document.querySelectorAll('.Tcontrol i');
+let TsetIntervalID = 0;
 console.log(grid);
 console.log(tetrominoesPieces);
 
@@ -73,6 +75,10 @@ function generateNewTetrominoes() {
     let y = -1;
     return {piece, x, y, colorIndex};
 }
+function closeButton() {
+    gameOverTModal.style.display = "none";
+    clearInterval(TsetIntervalID);
+}
 const GameOver = () => {
     gameOverTModal.style.display = "block";
 }
@@ -81,7 +87,7 @@ function restartGame() {
     location.reload();
 }
 function gameStart() {
-    if(gameOver) return GameOver();
+    if(gameOver) return GameOver()
     checkGrid();
     if (tetrominoesPieces == null) {
         tetrominoesPieces = generateNewTetrominoes();
@@ -232,7 +238,7 @@ function renderGrid() {
     renderPiece();
 } 
 function startButtonClick() {
-    setInterval(gameStart, 500);
+    TsetIntervalID = setInterval(gameStart, 500);
     startButton.style.display = "none";
 }
 function iconControl() {
