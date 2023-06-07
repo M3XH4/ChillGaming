@@ -206,7 +206,7 @@
     height: 78vh;
 }
 .gameTScreen {
-    width: 80vh;
+    width: 40vw;
 }
 .gameTInfo {
     display: flex;
@@ -326,7 +326,10 @@
     }
     /*Tetris*/
     .gameTContainer {
-        height: 83  vh;
+        height: 83vh;
+    }
+    .gameTScreen {
+        width: 80vw;
     }
     .Tboard {
         height: 50vh;
