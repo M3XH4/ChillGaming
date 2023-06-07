@@ -52,6 +52,7 @@ let canvas = document.querySelector("#tetrisBoard");
 let scoreText = document.querySelector(".Tscore");
 let highScoreText = document.querySelector(".ThighScore");
 const gameOverTModal = document.querySelector("#gameoverTModal")
+let startButton = document.querySelector(".startButton");
 let score = 0;
 let highScore = localStorage.getItem("TetrisHighScore") || 0;
 highScoreText.innerText = `High Score: ${highScore}`;
@@ -230,7 +231,10 @@ function renderGrid() {
     }
     renderPiece();
 } 
-setInterval(gameStart, 500);
+function startButtonClick() {
+    setInterval(gameStart, 500);
+    startButton.style.display = "none";
+}
 function iconControl() {
     controls.forEach(key => {
         key.addEventListener("click", () =>      
