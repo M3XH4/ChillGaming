@@ -190,6 +190,7 @@
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     background-color: rgb(132, 208, 61);
     color: white;
+    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
 }
 .sretryButton:active {
@@ -286,10 +287,29 @@
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     background-color: rgb(83, 244, 255);
     color: white;
+    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
 }
 .tretryButton:active {
     color: rgb(0, 229, 210);
+    font-family: 'Bebas Neue', sans-serif;
+}
+.startButton {
+    position: fixed;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: rgb(0, 143, 225);
+    transition: all 500ms;
+}
+.startButton:hover {
+    background-color: rgb(41, 25, 255);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    color: white;
+}
+.startButton:active {
+    background-color: blue;
 }
 @media only screen and (max-width: 768px) {
     /*TicTacToe*/
