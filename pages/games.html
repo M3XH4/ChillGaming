@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon_logo.ico">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/arcade.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/games.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script type="module" src="../js/gameManager.js"></script>
+  <title>Games | ChillGaming</title>
+</head>
+<body>
+  <nav class="arcade-nav">
+    <div class="site-shell nav-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/logo.png" alt="ChillGaming logo">
+        <span class="brand-title"><strong>ChillGaming</strong><span>Game dashboard</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="games.html">Games</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="about.html">About</a>
+        <button class="icon-button" data-mute-toggle aria-label="Mute sounds">🔊</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="site-shell game-page">
+    <div class="section-heading dashboard-heading">
+      <div>
+        <span class="eyebrow">Unified arcade dashboard</span>
+      </div>
+      <span class="status-pill">Local saves enabled</span>
+    </div>
+
+    <section class="dashboard-layout">
+      <aside class="dashboard-column">
+        <div class="side-box hud-panel">
+          <h3>Select Game</h3>
+          <div class="game-picker" data-game-picker></div>
+        </div>
+        <div class="side-box hud-panel" data-game-instructions></div>
+      </aside>
+
+      <section class="play-column">
+        <div class="game-toolbar hud-panel">
+          <div class="toolbar-title">
+            <span class="eyebrow">Now playing</span>
+            <h2 data-game-title>Game</h2>
+          </div>
+          <div class="toolbar-controls">
+            <select class="arcade-select difficulty-select" data-game-difficulty aria-label="Select difficulty">
+              <option value="easy">easy</option>
+              <option value="normal">normal</option>
+              <option value="hard">hard</option>
+            </select>
+            <div class="action-panel">
+              <div class="action-bar">
+                <button class="neon-button" data-action-start>Start</button>
+                <button class="ghost-button" data-action-pause>Pause</button>
+                <button class="ghost-button" data-action-resume>Resume</button>
+                <button class="ghost-button" data-action-restart>Restart</button>
+                <button class="neon-button" data-action-exit>Exit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-viewport hud-panel">
+          <canvas data-game-canvas width="720" height="520"></canvas>
+          <div data-game-mount></div>
+        </div>
+
+        <div class="mobile-controls hud-panel" data-mobile-controls aria-label="Mobile controls">
+          <span class="dpad-spacer"></span>
+          <button class="touch-btn" data-key="ArrowUp" aria-label="Up">▲</button>
+          <span class="dpad-spacer"></span>
+          <button class="touch-btn" data-key="ArrowLeft" aria-label="Left">◀</button>
+          <button class="touch-btn" data-key="ArrowDown" aria-label="Down">▼</button>
+          <button class="touch-btn" data-key="ArrowRight" aria-label="Right">▶</button>
+          <button class="touch-btn wide" data-key=" " aria-label="Action">ACTION</button>
+        </div>
+      </section>
+
+      <aside class="dashboard-column">
+        <div class="side-box hud-panel" data-game-extra></div>
+        <div class="game-hud hud-panel" aria-label="Game HUD">
+          <div class="hud-stat"><span>Game</span><strong data-hud-game>Game</strong></div>
+          <div class="hud-stat"><span>Score</span><strong data-hud-score>0</strong></div>
+          <div class="hud-stat"><span>High Score</span><strong data-hud-high>0</strong></div>
+          <div class="hud-stat"><span>Level</span><strong data-hud-level>normal</strong></div>
+          <div class="hud-stat"><span>Lives</span><strong data-hud-lives>∞</strong></div>
+          <div class="hud-stat"><span>Timer</span><strong data-hud-timer>00:00</strong></div>
+          <div class="hud-stat wide-stat"><span>Status</span><strong data-hud-status>Ready</strong></div>
+        </div>
+        <div class="side-box hud-panel">
+          <h3>Mini Leaderboard</h3>
+          <div data-side-leaderboard></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" data-modal>
+    <div class="modal-card pixel-corners">
+      <h2 data-modal-title>Game Over</h2>
+      <p data-modal-message>Final score: 0.</p>
+      <div class="modal-actions">
+        <button class="neon-button" data-modal-primary>Restart</button>
+        <button class="ghost-button" data-modal-secondary>Exit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

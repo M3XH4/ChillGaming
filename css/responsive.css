@@ -1,0 +1,176 @@
+@media (max-width: 980px) {
+  .hero-grid,
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-layout {
+    height: auto;
+    min-height: 0;
+  }
+
+  .dashboard-column,
+  .play-column {
+    height: auto;
+    overflow: visible;
+  }
+
+  .dashboard-layout > .dashboard-column:first-child,
+  .dashboard-layout > .dashboard-column:last-child,
+  .play-column {
+    grid-template-rows: auto;
+  }
+
+  .dashboard-column > .side-box {
+    overflow: visible;
+  }
+
+  .game-grid,
+  .stat-grid,
+  .leaderboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-hud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-layout .game-hud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-picker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .site-shell {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    flex: 1 1 auto;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .arcade-cabinet {
+    min-height: 310px;
+    padding: 14px;
+  }
+
+  .cabinet-screen {
+    height: 220px;
+  }
+
+  .game-grid,
+  .stat-grid,
+  .leaderboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .game-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .play-column .game-toolbar,
+  .toolbar-controls {
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .game-toolbar .left,
+  .game-toolbar .right,
+  .game-toolbar select,
+  .game-toolbar button {
+    width: 100%;
+  }
+
+  .game-hud {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-layout .game-hud {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .action-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toolbar-controls {
+    justify-items: stretch;
+    width: 100%;
+  }
+
+  .game-viewport {
+    height: min(70vh, 560px);
+    min-height: 360px;
+    padding: 10px;
+  }
+
+  .game-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-controls {
+    display: grid;
+  }
+
+  .leaderboard-table {
+    min-width: 620px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 2.55rem;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .game-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-layout .game-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-layout .hud-stat:first-child,
+  .dashboard-layout .wide-stat {
+    grid-column: auto;
+  }
+}

@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" files="image/x-icon" href="resource/favicon_logo.ico">
-    <title>ChillGaming</title>
-    <!--BOOTSTRAP5-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ChillGaming is a polished retro arcade platform for playing classic browser games.">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon_logo.ico">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/arcade.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/main.js"></script>
+  <title>ChillGaming</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbarHeader">
-        <a href="#">
-            <img src="resource/logo.png" width="70px" class="navbar-brand">
-        </a>
-        <span class="navbar-text webTitle">CHILLGAMING</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-        data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#aboutLink">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gamesLink">GAMES</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="aboutContainer" id="aboutLink">
-        <div class="aboutCardcontainer">
-            <div class="aboutCard">
-                <h1>ABOUT</h1>
-                <h2>
-                    CHILLGAMING
-                </h2>
-                <p>
-                    WHERE YOU CAN PLAY YOUR FAVORITE RETRO GAMES ON AN HTML5 WEBSITE.<br/>
-                    ENJOY AND HAVE FUN PLAYING THESE GAMES.
-                </p>
-            </div>     
-        </div>
+  <nav class="arcade-nav">
+    <div class="site-shell nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="ChillGaming logo">
+        <span class="brand-title"><strong>ChillGaming</strong><span>Retro browser arcade</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="pages/games.html">Games</a>
+        <a href="pages/leaderboard.html">Leaderboard</a>
+        <a href="pages/about.html">About</a>
+        <button class="icon-button" data-mute-toggle aria-label="Mute sounds">🔊</button>
+      </div>
     </div>
-    <div class="gameContainer" id="gamesLink">
-        <h1>GAMES</h1>
-        <div class="gameCardcontainer">
-            <div class="gameCard">
-            <div class="face front">
-                <div class="content">
-                <img src="resource/tictactoe.jpg" alt="" />
-                </div>
-            </div>
-            <div class="face back">
-                <div class="content">
-                <b><center><span ALIGN="CENTER">TIC-TAC-TOE</span><br /></center></b>
-                <p>
-                    This is a two player games where player alternately put Xs and Os
-                    and whoever lines the 3Xs Or 3Os in a row first will be the winner.
-                </p>
-                <button type="button" id="gameTicTacToe" onclick="redirectTicTacToe()">PLAY NOW</button>
-                </div>
-            </div>
-            </div>
-            <div class="gameCard">
-            <div class="face front">
-                <div class="content">
-                <img src="resource/snake.jpg" alt="" />
-                </div>
-            </div>
-            <div class="face back">
-                <div class="content">
-                <b><center><span ALIGN="CENTER">SNAKE</span><br /></center></b>
-                <p>
-                    The player controls a snake, which roams around on a borderer plane,
-                    picking up food, trying to avoid hitting its own tail or the edge of the border.
-                </p>
-                <button type="button" id="gameSnake" onclick="redirectSnake()">PLAY NOW</button>
-                </div>
-            </div>
-            </div>
-            <div class="gameCard">
-            <div class="face front">
-                <div class="content">
-                <img src="resource/tetris.jpg" alt="" />
-                </div>
-            </div>
-            <div class="face back">
-                <div class="content">
-                <b><center><span ALIGN="CENTER">TETRIS</span><br /></center></b>
-                <p>
-                    Tetris is a puzzle game in which geometric shapes called “tetrominoes”
-                    fall down onto a playing field, and the player has to arrange them to 
-                    form gapless lines.
-                </p>
-                <button type="button" id="gameTetris" onclick="redirectTetris()">PLAY NOW</button>
-                </div>
-            </div>
-            </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="site-shell hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Insert coin</span>
+          <h1>ChillGaming</h1>
+          <p>Play classic retro games in your browser with a unified arcade dashboard, local high scores, difficulty settings, sound controls, and touch-friendly controls for mobile play.</p>
+          <p>Pick a cabinet, chase your best run, and climb the leaderboard across Tetris, Snake, Tic-Tac-Toe, PacMan, Flappy Bird, and Space Invaders.</p>
+          <div class="hero-actions">
+            <a class="neon-button" href="pages/games.html">Start Playing</a>
+            <a class="ghost-button" href="pages/leaderboard.html">View Leaderboard</a>
+          </div>
         </div>
-    </div>
+        <div class="arcade-cabinet pixel-corners" aria-label="ChillGaming arcade visual">
+          <div class="cabinet-screen">
+            <img src="assets/images/logo.png" alt="">
+          </div>
+          <div class="cabinet-marquee">
+            <span>PLAY</span>
+            <span>SCORE</span>
+            <span>REPEAT</span>
+          </div>
+        </div>
+      </div>
+      <div class="game-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Tetris Tic-Tac-Toe Snake PacMan Flappy Bird Space Invaders</span>
+          <span>Tetris Tic-Tac-Toe Snake PacMan Flappy Bird Space Invaders</span>
+          <span>Tetris Tic-Tac-Toe Snake PacMan Flappy Bird Space Invaders</span>
+          <span>Tetris Tic-Tac-Toe Snake PacMan Flappy Bird Space Invaders</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Arcade dashboard</span>
+            <h2>Choose Your Cabinet</h2>
+          </div>
+          <a class="ghost-button" href="pages/games.html">Open Dashboard</a>
+        </div>
+        <div class="stat-grid" aria-label="Arcade stats">
+          <div class="stat-tile"><strong data-total-games>6</strong><span>Playable games</span></div>
+          <div class="stat-tile"><strong data-total-scores>0</strong><span>Saved local runs</span></div>
+          <div class="stat-tile"><strong>3</strong><span>Difficulty modes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Game selection</span>
+            <h2>Retro Cabinets</h2>
+          </div>
+        </div>
+        <div class="game-grid" data-game-cards data-asset-prefix="./" data-base-path="pages/games.html"></div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Local leaderboard</span>
+            <h2>Top Runs</h2>
+          </div>
+          <a class="ghost-button" href="pages/leaderboard.html">Full Board</a>
+        </div>
+        <div class="hud-panel side-box" data-leaderboard data-limit="6"></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
