@@ -14,6 +14,7 @@
   align-items: stretch;
   height: var(--dashboard-height);
   min-height: 0;
+  overflow: visible;
 }
 
 .dashboard-column,
@@ -148,6 +149,11 @@
   grid-template-columns: minmax(180px, 0.68fr) minmax(300px, 1fr);
   align-items: start;
   gap: 14px;
+}
+
+.dashboard-column h3,
+.toolbar-title h2 {
+  overflow-wrap: anywhere;
 }
 
 .dashboard-layout .game-hud {

@@ -1,5 +1,5 @@
 .game-page {
-  padding: 28px 0 56px;
+  padding: clamp(16px, 4vw, 28px) 0 56px;
 }
 
 .game-stage {
@@ -118,28 +118,46 @@
 
 .mobile-controls {
   display: none;
-  grid-template-columns: repeat(3, 64px);
+  grid-template-columns: auto minmax(0, 1fr);
   justify-content: center;
+  align-items: center;
   gap: 8px;
   padding: 14px;
 }
 
-.mobile-controls .wide {
-  grid-column: span 3;
+.mobile-dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 58px);
+  gap: 8px;
+  justify-content: center;
+}
+
+.mobile-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(92px, 1fr));
+  gap: 8px;
 }
 
 .dpad-spacer {
-  width: 64px;
-  height: 50px;
+  width: 58px;
+  height: 52px;
 }
 
 .touch-btn {
-  min-height: 50px;
+  min-height: 52px;
   border: 1px solid rgba(39, 232, 255, 0.32);
   border-radius: var(--radius);
   color: var(--text);
   background: rgba(39, 232, 255, 0.1);
   box-shadow: inset 0 0 16px rgba(39, 232, 255, 0.1);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  touch-action: manipulation;
+}
+
+.touch-btn[hidden] {
+  display: none;
 }
 
 .touch-btn:active {
@@ -148,7 +166,7 @@
 }
 
 .ttt-board {
-  width: min(92vw, 420px);
+  width: min(100%, 420px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;

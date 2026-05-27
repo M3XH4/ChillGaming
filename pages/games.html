@@ -75,13 +75,21 @@
         </div>
 
         <div class="mobile-controls hud-panel" data-mobile-controls aria-label="Mobile controls">
-          <span class="dpad-spacer"></span>
-          <button class="touch-btn" data-key="ArrowUp" aria-label="Up">▲</button>
-          <span class="dpad-spacer"></span>
-          <button class="touch-btn" data-key="ArrowLeft" aria-label="Left">◀</button>
-          <button class="touch-btn" data-key="ArrowDown" aria-label="Down">▼</button>
-          <button class="touch-btn" data-key="ArrowRight" aria-label="Right">▶</button>
-          <button class="touch-btn wide" data-key=" " aria-label="Action">ACTION</button>
+          <div class="mobile-dpad">
+            <span class="dpad-spacer"></span>
+            <button class="touch-btn" data-control="up" data-key="ArrowUp" aria-label="Up">▲</button>
+            <span class="dpad-spacer"></span>
+            <button class="touch-btn" data-control="left" data-key="ArrowLeft" aria-label="Left">◀</button>
+            <button class="touch-btn" data-control="down" data-key="ArrowDown" aria-label="Down">▼</button>
+            <button class="touch-btn" data-control="right" data-key="ArrowRight" aria-label="Right">▶</button>
+          </div>
+          <div class="mobile-actions">
+            <button class="touch-btn" data-control="rotate" data-key="ArrowUp">Rotate</button>
+            <button class="touch-btn" data-control="jump" data-key=" ">Jump</button>
+            <button class="touch-btn" data-control="shoot" data-key=" ">Shoot</button>
+            <button class="touch-btn" data-control="pause" data-mobile-action="pause">Pause</button>
+            <button class="touch-btn" data-control="restart" data-mobile-action="restart">Restart</button>
+          </div>
         </div>
       </section>
 

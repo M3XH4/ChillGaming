@@ -98,6 +98,13 @@ createInputManager({
     if (!hasStarted) return;
     currentGame?.input?.(key, event);
   },
+  onAction(action) {
+    if (action === "pause") {
+      if (currentGame?.isPaused?.()) els.resume.click();
+      else els.pause.click();
+    }
+    if (action === "restart") els.restart.click();
+  },
 });
 
 loadGame(factories[initial] ? initial : "tetris");
@@ -120,6 +127,7 @@ function loadGame(gameId) {
   els.canvas.hidden = false;
   els.mount.innerHTML = "";
   els.extra.innerHTML = "";
+  configureMobileControls(gameId);
   els.instructions.innerHTML = `
     <h3>${game.title}</h3>
     <p>${game.description}</p>
@@ -152,6 +160,21 @@ function loadGame(gameId) {
 
   currentGame = factory(context);
   drawReadyScreen(game.title);
+}
+
+function configureMobileControls(gameId) {
+  const controlsByGame = {
+    tetris: ["left", "right", "down", "rotate", "pause", "restart"],
+    snake: ["up", "down", "left", "right", "pause", "restart"],
+    pacman: ["up", "down", "left", "right", "pause", "restart"],
+    flappybird: ["jump", "pause", "restart"],
+    spaceinvaders: ["left", "right", "shoot", "pause", "restart"],
+    tictactoe: ["restart"],
+  };
+  const visible = new Set(controlsByGame[gameId] || []);
+  els.mobile.querySelectorAll("[data-control]").forEach((button) => {
+    button.hidden = !visible.has(button.dataset.control);
+  });
 }
 
 function startGame() {
