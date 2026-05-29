@@ -8,7 +8,7 @@
 
 Play classic arcade games in your browser with a nostalgic neon aesthetic, responsive gameplay, and a unified arcade dashboard.
 
-[Live Demo](https://chillgaming.vercel.app) • [Report Bug](../../issues) • [Request Feature](../../issues)
+[Live Demo](https://m3xh4.github.io/ChillGaming/) • [Report Bug](../../issues) • [Request Feature](../../issues)
 
 </div>
 
