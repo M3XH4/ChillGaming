@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![ChillGaming Banner](assets/images/projects/chillgaming-hero.png)
+![ChillGaming Banner](assets/images/banner.png)
 
 ### ✨ A Modern Retro Arcade Experience
 
